@@ -65,6 +65,11 @@ router.get('/music', (req, res) => {
         sendError(err, res);
       });
   });
+
+  // Test - do nothing
+  router.get('/ping', (req, res) => {
+    res.json("We're all good here!");
+  });
 });
 
 module.exports = router;
