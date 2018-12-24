@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
+const dotenv = require('dotenv');
+dotenv.load();
 
 // API file for interacting with MongoDB
 const api = require('./routes/api');

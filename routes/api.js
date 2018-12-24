@@ -3,8 +3,8 @@ const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 
 // Connect
-const url =
-  'mongodb+srv://mcomm:7qytNSjbwoTIqFdn@mcomm1-m715q.azure.mongodb.net/personal?retryWrites=true';
+const url = process.env.MONGO_CONNECTION;
+console.log(url);
 
 const connection = closure => {
   return MongoClient.connect(
